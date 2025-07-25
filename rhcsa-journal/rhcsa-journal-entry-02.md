@@ -1,11 +1,11 @@
-# Journal Entry 04 - Bash History, Shell Expansion, Aliases
+# Journal Entry 02 - Bash History, Shell Expansion, Aliases
 
 **Date:** 2025-07-08 
 **Focus:** RHCSA — History, Shell Behavior, Startup Files
 
 ---
 
-### ⌨️ Command History
+### Command History
 - `~/.bash_history` stores previously executed commands.
 - **Reverse search**: `Ctrl + r`
 - **Repeat specific**: `!23` (repeats command #23)
@@ -13,7 +13,7 @@
 
 ---
 
-### 🧠 Shell Shortcuts & Editing
+###  Shell Shortcuts & Editing
 - `Ctrl + a`: Move to beginning of line 
 - `Ctrl + e`: Move to end of line 
 - `Ctrl + u`: Delete entire line 
@@ -25,7 +25,7 @@
 
 ---
 
-### 🧩 Shell Expansion (Globbing)
+###  Shell Expansion (Globbing)
 - **Wildcards**:
   - `*` matches any number of characters 
   - `?` matches a single character 
@@ -34,21 +34,21 @@
 
 ---
 
-### 🔒 Escaping and Quoting
+###  Escaping and Quoting
 - `""` suppress globbing but allows variable/command substitution 
 - `''` disables all interpretation (raw text) 
 - `\` escapes the next character only
 
 ---
 
-### 🌍 Environment Variables & Aliases
+###  Environment Variables & Aliases
 - Set variable: `export COLOR=red`
 - Alias: `alias lookup='ls -ltr'`
 - Remove alias: `unalias lookup`
 
 ---
 
-### 🧬 Bash Startup Files
+###  Bash Startup Files
 - `/etc/profile`: System-wide login shell config 
 - `/etc/bashrc`: System-wide interactive shell settings 
 - `~/.bash_profile`: User login shell config 
@@ -56,7 +56,7 @@
 
 ---
 
-### 🔬 Lab Practice
+###  Lab Practice
 **Goal:** Persist variable `color=red` and alias `dir='ls -ltr'`
 
 1. `vim ~/.bash_profile` 

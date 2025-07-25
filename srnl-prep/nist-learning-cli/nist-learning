@@ -1,0 +1,140 @@
+# NIST Frameworks Journal — Cybersecurity Analyst Foundations
+
+**Date:** July 22, 2025  
+**Author:** Andre Crawford  
+**Folder:** /NIST/  
+
+---
+
+##  Purpose
+
+This journal entry consolidates what I learned from in-depth review and note-taking on key NIST cybersecurity frameworks including NIST SP 800-37 (RMF), SP 800-53 (Security Controls), SP 800-60 (System Categorization), SP 800-63 (Digital Identity), and the process for drafting System Security Plans (SSPs). This material forms the conceptual backbone of what a federal cybersecurity analyst must understand.
+
+---
+
+##  The Role of the Cybersecurity Analyst
+
+A security analyst in a federal/NIST-regulated environment helps:
+- Analyze threats and vulnerabilities
+- Track implementation of safeguards (technical and procedural)
+- Monitor security control effectiveness
+- Support compliance efforts for FISMA, RMF, and agency-specific security needs
+- Assist in documentation like SSPs, POA&Ms, and ATO packages
+
+---
+
+##  NIST SP 800-37 — The Risk Management Framework (RMF)
+
+The RMF provides a 7-step process for securing federal information systems:
+
+### **Step 0: Prepare**
+- Identify stakeholders, assign roles (e.g., ISSO, AO)
+- Establish risk tolerance and organizational strategy
+
+### **Step 1: Categorize**
+- Use **FIPS 199** and **SP 800-60** to assess impact levels (Low, Moderate, High)
+- Base categorization on CIA triad (Confidentiality, Integrity, Availability)
+- Identify if system handles **PII**, mission-critical data, etc.
+- Outputs: PTA (Privacy Threshold Analysis), BIA (Business Impact Analysis)
+
+### **Step 2: Select Controls**
+- Use NIST **SP 800-53** to choose control baseline based on categorization
+- Modify controls as needed (tailoring)
+- Identify common controls vs system-specific
+- Begin SSP draft
+
+### **Step 3: Implement Controls**
+- Apply technical, management, and operational controls
+- Example: enforce password policy, configure logging, deploy antivirus
+- Write **implementation statements** for SSP to describe HOW each control is met
+
+### **Step 4: Assess Controls**
+- Use third-party assessors or internal team
+- Generate a Security Assessment Report (SAR)
+- Identify risks, weaknesses, and residual risk
+
+### **Step 5: Authorize System**
+- Authorizing Official (AO) reviews package (SSP + SAR + POA&M)
+- Issues an **ATO** (Authorization to Operate), **IATO**, or **Denial**
+
+### **Step 6: Monitor**
+- Continuously track control effectiveness
+- Respond to new risks or threats
+- Update documentation as system evolves
+
+---
+
+##  NIST SP 800-53 — Security Control Catalog
+
+- Contains **1,000+ security controls** grouped into families:
+  - AC (Access Control)
+  - AU (Audit & Accountability)
+  - IR (Incident Response)
+  - SI (System Integrity), etc.
+- Controls support technical, operational, and management layers
+- Each control includes: Control Statement, Supplemental Guidance, Control Enhancements
+- Controls are **tailored** to system needs
+
+---
+
+##  NIST SP 800-60 — Impact Categorization
+
+- Maps specific types of data (e.g., financial, healthcare, PII) to their security objectives
+- Tied to Step 1 of the RMF (Categorize)
+- Helps determine impact values for CIA triad
+
+---
+
+## 💻 NIST SP 800-63 — Digital Identity Guidelines
+
+- Covers **authentication** and **identity proofing**
+- Important for controls in the IA (Identification and Authentication) family
+- Defines Assurance Levels (IAL, AAL, FAL)
+  - E.g., AAL2 = MFA required
+- Useful for justifying use of smartcards, CACs, tokens, etc.
+
+---
+
+##  Drafting the System Security Plan (SSP)
+
+The **SSP** is a foundational document that describes how controls from 800-53 are applied to a system.
+
+### What the SSP includes:
+- System Name & Owner
+- Categorization Level (Low/Mod/High)
+- Description of the system and environment
+- List of applicable controls (with tailoring)
+- Implementation statements (how each control is satisfied)
+- Diagrams, user roles, boundary descriptions
+
+### Related Documents:
+- POA&M (Plan of Actions and Milestones)
+- SAR (Security Assessment Report)
+- BIA / PTA / PIA
+
+---
+
+##  How It All Ties Together
+
+- **FISMA** requires federal systems to meet security standards → leads to **RMF**
+- **RMF** outlines a full lifecycle → leads to selecting controls from **800-53**
+- **800-60** + **FIPS 199** help with data/system categorization
+- **800-63** supports authentication and identity management
+- Outputs like SSP, SAR, and POA&M form the **ATO package** for final approval
+
+---
+
+##  Takeaways
+
+- I now understand what goes into each RMF step, and how real-world actions (like running STIGs or using Splunk) fit into that framework
+- I can explain the structure and purpose of an SSP
+- I recognize how different NIST docs support various tasks of an analyst or ISSO
+- This foundational knowledge prepares me for deeper technical roles and compliance conversations
+
+---
+
+##  Next Steps
+
+- Begin building a mock SSP from scratch based on a virtual system
+- Tie STIG findings and Splunk logs into 800-53 families
+- Continue RHCSA labs and map CLI work to control implementation where applicable
